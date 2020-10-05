@@ -1,0 +1,4 @@
+- name: Install slack
+  become: false
+  command:
+    cmd: yay -Syy slack-desktop --noprovides --nodiffmenu --nocleanmenu --noupgrademenu
