@@ -1,0 +1,4 @@
+- name: Install Microsoft Teams
+  become: false
+  command:
+    cmd: yay -Syy teams --noprovides --nodiffmenu --nocleanmenu --noupgrademenu
