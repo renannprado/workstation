@@ -1,0 +1,25 @@
+- name: AUR pre-requisits
+  community.general.pacman:
+    name: base-devel
+    state: present
+- name: Install git
+  community.general.pacman:
+    name: git
+    state: present
+- name: Install Golang (also needed to install yay)
+  community.general.pacman:
+    name: go
+    state: present
+- name: Clone yay
+  become: false
+  git:
+    repo: https://aur.archlinux.org/yay.git
+    dest: /tmp/yay-clone
+  when: "'/usr/bin/yay' is not exists" 
+- name: Build and install yay
+  become: false
+  command:
+    # cmd: sudo -H -u {{ lookup('env', 'USER') }} bash -c 'makepkg -si'
+    cmd: makepkg -si --noconfirm
+    chdir: /tmp/yay-clone
+    creates: /usr/bin/yay
