@@ -1,4 +1,5 @@
 - name: Install slack
+  when: "'/usr/bin/slack' is not exists"
   become: false
   command:
     cmd: yay -Syy slack-desktop --noprovides --nodiffmenu --nocleanmenu --noupgrademenu

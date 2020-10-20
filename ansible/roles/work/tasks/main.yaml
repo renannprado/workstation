@@ -1,4 +1,5 @@
 - name: Install Microsoft Teams
+  when: "'/usr/bin/teams' is not exists"
   become: false
   command:
     cmd: yay -Syy teams --noprovides --nodiffmenu --nocleanmenu --noupgrademenu
