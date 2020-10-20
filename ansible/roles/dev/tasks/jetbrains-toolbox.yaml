@@ -1,0 +1,28 @@
+- name: Download Jetbrains Toolbox
+  when: "'/opt/jetbrains-toolbox/jetbrains-toolbox' is not exists"
+  get_url:
+    dest: /tmp/jetbrains-toolbox-1.18.7455.tar.gz
+    url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.18.7455.tar.gz
+    checksum: sha256:5d8acef010816cec5082e37cf07607c59cf1534d3fd7d9546d5cbb55149cdd54
+- name: Create Jetbrains Toolbox directory
+  file:
+    path: /opt/jetbrains-toolbox
+    group: "{{ lookup('env', 'USER') }}"
+    owner: "{{ lookup('env', 'USER') }}"
+    state: directory
+- name: Unzip Jetbrains Toolbox
+  when: "'/opt/jetbrains-toolbox/jetbrains-toolbox' is not exists"
+  unarchive:
+    src: /tmp/jetbrains-toolbox-1.18.7455.tar.gz
+    dest: /tmp/
+    group: "{{ lookup('env', 'USER') }}"
+    owner: "{{ lookup('env', 'USER') }}"
+- name: Move Jetbrains Toolbox into its directory
+  when: "'/opt/jetbrains-toolbox/jetbrains-toolbox' is not exists"
+  command: mv /tmp/jetbrains-toolbox-1.18.7455/jetbrains-toolbox /opt/jetbrains-toolbox/jetbrains-toolbox
+- name: Ensure Jetbrains Toolbox bin file permissions
+  file:
+    path: /opt/jetbrains-toolbox/jetbrains-toolbox
+    owner: "{{ lookup('env', 'USER') }}"
+    group: "{{ lookup('env', 'USER') }}"
+    mode: 0744

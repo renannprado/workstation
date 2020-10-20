@@ -11,12 +11,13 @@
     name: go
     state: present
 - name: Clone yay
+  when: "'/usr/bin/yay' is not exists" 
   become: false
   git:
     repo: https://aur.archlinux.org/yay.git
     dest: /tmp/yay-clone
-  when: "'/usr/bin/yay' is not exists" 
 - name: Build and install yay
+  when: "'/usr/bin/yay' is not exists" 
   become: false
   command:
     # cmd: sudo -H -u {{ lookup('env', 'USER') }} bash -c 'makepkg -si'
