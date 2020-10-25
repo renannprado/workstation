@@ -4,3 +4,4 @@
 - include_tasks: tmux.yaml
 - include_tasks: alacritty.yaml
 - include_tasks: neovim.yaml
+- include_tasks: unzip.yaml
