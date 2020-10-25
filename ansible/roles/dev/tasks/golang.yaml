@@ -1,0 +1,4 @@
+- name: Install Golang (also needed to install yay)
+  community.general.pacman:
+    name: go
+    state: present

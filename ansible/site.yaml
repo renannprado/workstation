@@ -1,6 +1,6 @@
 - hosts: localhost
   roles:
+  - dev
   - misc
   - social
   - work
-  - dev
