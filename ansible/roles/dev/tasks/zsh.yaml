@@ -1,0 +1,8 @@
+- name: Install zsh
+  community.general.pacman:
+    name: zsh
+    state: present
+- name: Install zsh-completions
+  community.general.pacman:
+    name: zsh-completions
+    state: present
