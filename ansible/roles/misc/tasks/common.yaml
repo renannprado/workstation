@@ -1,0 +1,4 @@
+- name: AUR pre-requisits
+  community.general.pacman:
+    name: base-devel
+    state: present

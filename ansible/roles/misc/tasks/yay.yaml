@@ -1,0 +1,14 @@
+- name: Clone yay
+  when: "'/usr/bin/yay' is not exists" 
+  become: false
+  git:
+    repo: https://aur.archlinux.org/yay.git
+    dest: /tmp/yay-clone
+# depends on golang
+- name: Build and install yay
+  when: "'/usr/bin/yay' is not exists" 
+  become: false
+  command:
+    cmd: makepkg -si --noconfirm
+    chdir: /tmp/yay-clone
+    creates: /usr/bin/yay
