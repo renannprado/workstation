@@ -3,3 +3,4 @@
 - include_tasks: jetbrains-toolbox.yaml
 - include_tasks: vscode.yaml
 - include_tasks: zsh.yaml
+- include_tasks: docker.yaml
