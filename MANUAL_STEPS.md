@@ -31,6 +31,10 @@ $ZDOTDIR/.zlogout Used for executing commands when a login shell exits.
 /etc/zsh/zlogout Used for executing commands for all users when a login shell exits.
 ```
 
+### Install zsh plugin manager
+
+TODO I still have to try it out: https://github.com/zsh-users/antigen
+
 ## Install asdf and sdkman
 
 
