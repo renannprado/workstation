@@ -1,0 +1,4 @@
+- name: Install i3
+  community.general.pacman:
+    name: community/i3
+    state: present
