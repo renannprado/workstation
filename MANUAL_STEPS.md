@@ -30,3 +30,10 @@ $ZDOTDIR/.zlogin Used for executing user's commands at ending of initial progres
 $ZDOTDIR/.zlogout Used for executing commands when a login shell exits.
 /etc/zsh/zlogout Used for executing commands for all users when a login shell exits.
 ```
+
+## Install asdf and sdkman
+
+
+https://asdf-vm.com/#/core-manage-asdf?id=asdf
+
+https://sdkman.io/install
