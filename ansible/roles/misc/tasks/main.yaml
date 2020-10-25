@@ -1,2 +1,3 @@
 - include_tasks: common.yaml
 - include_tasks: yay.yaml
+- include_tasks: ripgrep.yaml
