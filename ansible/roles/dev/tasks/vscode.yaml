@@ -1,0 +1,4 @@
+- name: Install vscode
+  community.general.pacman:
+    name: community/code
+    state: present
