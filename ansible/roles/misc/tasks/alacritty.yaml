@@ -1,0 +1,4 @@
+- name: Install ripgrep
+  community.general.pacman:
+    name: community/ripgrep
+    state: present

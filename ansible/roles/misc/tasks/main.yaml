@@ -1,3 +1,5 @@
 - include_tasks: common.yaml
 - include_tasks: yay.yaml
 - include_tasks: ripgrep.yaml
+- include_tasks: tmux.yaml
+- include_tasks: alacritty.yaml
