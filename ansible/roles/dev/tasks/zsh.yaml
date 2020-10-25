@@ -6,3 +6,5 @@
   community.general.pacman:
     name: zsh-completions
     state: present
+- name: Set zsh as default shell for {{ lookup('env', 'USER') }}
+  command: chsh -s /usr/bin/zsh {{ lookup('env', 'USER') }}
