@@ -41,3 +41,12 @@ TODO I still have to try it out: https://github.com/zsh-users/antigen
 https://asdf-vm.com/#/core-manage-asdf?id=asdf
 
 https://sdkman.io/install
+
+
+## Instal rust
+
+https://rustup.rs/
+
+```shell
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
