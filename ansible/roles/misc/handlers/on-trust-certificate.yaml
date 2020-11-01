@@ -1,3 +1,0 @@
-- name: on_trust_certificate
-  command:
-    cmd: update-ca-trust

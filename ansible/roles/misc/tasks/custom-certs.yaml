@@ -6,3 +6,11 @@
   command:
     cmd: trust anchor --store roles/misc/files/certificates/bitwarden.home.pem
   notify: on_trust_certificate
+- name: Create custom certificates directory
+  file:
+    path: /opt/custom-certificates
+    state: directory
+- name: Copy custom certificates
+  copy:
+    dest: /opt/custom-certificates
+    src: certificates/*
