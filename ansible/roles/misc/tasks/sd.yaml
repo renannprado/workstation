@@ -1,0 +1,5 @@
+# replacement for sed
+- name: Install sd
+  pacman:
+    name: community/sd
+    state: present
