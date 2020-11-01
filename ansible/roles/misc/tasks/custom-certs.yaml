@@ -12,5 +12,5 @@
     state: directory
 - name: Copy custom certificates
   synchronize:
-    src: certificates
+    src: certificates/
     dest: /opt/custom-certificates
