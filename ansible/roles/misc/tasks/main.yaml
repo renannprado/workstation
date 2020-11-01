@@ -8,3 +8,4 @@
 # i3 related tasks
 - include_tasks: i3.yaml
 - include_tasks: i3-rofi.yaml
+- include_tasks: custom-ca-certs.yaml

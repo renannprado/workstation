@@ -1,0 +1,7 @@
+# - name: Install home certificate
+  # when: "'/usr/bin/yay' is not exists" 
+  # command:
+    # cmd: trust anchor --store 
+- name: Install home certificate2
+  command:
+    cmd: pwd
