@@ -1,0 +1,4 @@
+- name: Install jq
+  pacman:
+    name: community/jq
+    state: present
