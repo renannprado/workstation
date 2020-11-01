@@ -10,5 +10,7 @@
   synchronize:
     src: certificates/
     dest: /opt/custom-certificates
-    group: root
-    owner: root
+    perms: true
+    rsync_opts:
+      - "--chmod=u=rw,g=r,o=r"
+      - "--chown=root:root"
