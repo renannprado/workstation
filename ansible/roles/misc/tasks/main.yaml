@@ -10,3 +10,4 @@
 - include_tasks: i3-rofi.yaml
 - include_tasks: custom-certs.yaml
 - include_tasks: sd.yaml
+- include_tasks: jq.yaml
