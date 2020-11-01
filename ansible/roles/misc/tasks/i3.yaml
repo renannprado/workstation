@@ -6,3 +6,8 @@
   pacman:
     name: i3status-rust
     state: present
+# needed by i3status-rust
+- name: Install ttf-font-awesome
+  pacman:
+    name: ttf-font-awesome
+    state: present
