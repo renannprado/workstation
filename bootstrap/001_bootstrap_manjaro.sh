@@ -1,12 +1,12 @@
 #!/bin/bash
 
-sudo pacman -Syy --noconfirm git community/docker 
+# sudo pacman -Syy --noconfirm git
 
-sudo gpasswd -a $USER docker
+# sudo gpasswd -a $USER docker
 
-sudo systemctl enable docker
+# sudo systemctl enable docker
 
-sudo systemctl start docker
+# sudo systemctl start docker
 
 pip3 install ansible
 
