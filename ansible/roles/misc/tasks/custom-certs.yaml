@@ -6,13 +6,6 @@
   command:
     cmd: trust anchor --store roles/misc/files/certificates/bitwarden.home.pem
   notify: on_trust_certificate
-- name: Create custom certificates directory
-  file:
-    path: /opt/custom-certificates
-    state: directory
-    group: root
-    owner: root
-    mode: u=rwx,g=rx,o=rx
 - name: Copy custom certificates
   synchronize:
     src: certificates/
@@ -20,3 +13,10 @@
     rsync_opts:
       - "--chmod=u=rw,g=r,o=r"
       - "--chown=root:root"
+- name: Create custom certificates directory
+  file:
+    path: /opt/custom-certificates
+    state: directory
+    group: root
+    owner: root
+    mode: u=rwx,g=rx,o=rx
