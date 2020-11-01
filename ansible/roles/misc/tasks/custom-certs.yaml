@@ -4,5 +4,5 @@
   notify: on_trust_certificate
 - name: Install bitwarden.home certificate
   command:
-    cmd: trust certificates --store roles/misc/files/certificates/bitwarden.home.pem
+    cmd: trust anchor --store roles/misc/files/certificates/bitwarden.home.pem
   notify: on_trust_certificate
