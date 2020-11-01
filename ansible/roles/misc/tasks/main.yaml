@@ -5,4 +5,6 @@
 - include_tasks: alacritty.yaml
 - include_tasks: neovim.yaml
 - include_tasks: unzip.yaml
+# i3 related tasks
 - include_tasks: i3.yaml
+- include_tasks: i3-rofi.yaml
