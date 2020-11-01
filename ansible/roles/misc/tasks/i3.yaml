@@ -1,0 +1,8 @@
+- name: Install i3
+  pacman:
+    name: i3-gaps
+    state: present
+- name: Install i3status-rust
+  pacman:
+    name: i3status-rust
+    state: present
