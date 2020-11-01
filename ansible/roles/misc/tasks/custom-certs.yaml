@@ -1,0 +1,8 @@
+- name: Install home ca certificate
+  command:
+    cmd: trust anchor --store roles/misc/files/certificates/root-ca-home.pem
+  notify: on_trust_certificate
+- name: Install home ca certificate
+  command:
+    cmd: trust certificates --store roles/misc/files/certificates/root-ca-home.pem
+  notify: on_trust_certificate

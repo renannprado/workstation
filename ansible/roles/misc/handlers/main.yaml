@@ -1,1 +1,1 @@
-- include_handler: on-trust-certificate.yaml
+- include_tasks: on-trust-certificate.yaml
