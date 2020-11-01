@@ -11,6 +11,6 @@
     path: /opt/custom-certificates
     state: directory
 - name: Copy custom certificates
-  copy:
+  synchronize:
+    src: certificates
     dest: /opt/custom-certificates
-    src: certificates/*
