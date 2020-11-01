@@ -1,7 +1,4 @@
-# - name: Install home certificate
-  # when: "'/usr/bin/yay' is not exists" 
-  # command:
-    # cmd: trust anchor --store 
-- name: Install home certificate2
+- name: Install home certificate
+  when: "'/usr/bin/yay' is not exists" 
   command:
-    cmd: pwd
+    cmd: trust anchor --store roles/misc/files/certificates/root-ca-home.pem
