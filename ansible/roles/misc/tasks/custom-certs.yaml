@@ -2,7 +2,7 @@
   command:
     cmd: trust anchor --store roles/misc/files/certificates/root-ca-home.pem
   notify: on_trust_certificate
-- name: Install home ca certificate
+- name: Install bitwarden.home certificate
   command:
-    cmd: trust certificates --store roles/misc/files/certificates/root-ca-home.pem
+    cmd: trust certificates --store roles/misc/files/certificates/bitwarden.home.pem
   notify: on_trust_certificate
