@@ -11,3 +11,4 @@
 - include_tasks: custom-certs.yaml
 - include_tasks: sd.yaml
 - include_tasks: jq.yaml
+- include_tasks: gnome-keyring.yaml

@@ -1,0 +1,4 @@
+- name: Install gnome-keyring
+  pacman:
+    name: gnome-keyring
+    state: present
